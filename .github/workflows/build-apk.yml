@@ -26,11 +26,11 @@ jobs:
       - name: Gerar build do projeto
         run: npm run build
 
-      - name: Configurar Java JDK 17
+      - name: Configurar Java JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17'
+          java-version: '21'
 
       - name: Sincronizar Capacitor com Android
         run: npx cap sync android || npx cap add android
